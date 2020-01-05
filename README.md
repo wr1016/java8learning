@@ -1,2 +1,2 @@
 # java8learning
-Learn from 《写给大忙人看的Java SE 8》
+Learned from <Java SE 8 for the Really Impatient>
