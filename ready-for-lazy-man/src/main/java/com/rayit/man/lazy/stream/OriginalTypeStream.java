@@ -1,10 +1,7 @@
 package com.rayit.man.lazy.stream;
 
 import java.util.*;
-import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
-import java.util.stream.LongStream;
-import java.util.stream.Stream;
+import java.util.stream.*;
 
 public class OriginalTypeStream {
 
@@ -26,7 +23,7 @@ public class OriginalTypeStream {
         // string.codePoints() / string.chars()
         String sentence = "\uD835\uDD46 is the set of octonions.";
         IntStream codes = sentence.codePoints();
-        System.out.println("codes = " + Arrays.toString(codes.toArray()));
+        System.out.println("codes = " + codes.mapToObj(c -> String.format("%X ", c)).collect(Collectors.joining()));
         IntStream codes2 = sentence.chars();
         System.out.println("codes2 = " + Arrays.toString(codes2.toArray()));
 
