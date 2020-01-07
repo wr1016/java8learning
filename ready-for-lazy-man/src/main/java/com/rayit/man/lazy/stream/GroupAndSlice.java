@@ -55,7 +55,7 @@ public class GroupAndSlice {
         System.out.println("onePerson2 = " + onePerson2);
 
         // groupingByConcurrent()
-        ConcurrentMap<Integer, List<Person>> idToPersons3 = people2().parallel().collect(Collectors.groupingByConcurrent(Person::getId));
+        Map<Integer, List<Person>> idToPersons3 = people2().parallel().collect(Collectors.groupingByConcurrent(Person::getId));
         List<Person> onePerson3 = idToPersons3.get(1004);
         System.out.println("onePerson3 = " + onePerson3);
 
